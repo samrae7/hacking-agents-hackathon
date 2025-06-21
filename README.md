@@ -16,11 +16,11 @@ The project consists of two main components:
 - **WebSocket** integration for bidirectional communication
 - **Langflow integration** via HTTP API calls
 
-### 2. Event Management System (`/langflow`)
-- **Flask web server** serving event data via REST API
-- **MCP (Model Context Protocol) server** for Langflow integration
-- **Event data management** with JSON-based storage
-- **SMS notifications** via Twilio integration
+### 2. Langflow Components (`/langflow`)
+- **Langflow Agent** (`EmCee P Agent.json`) - Import this JSON file into Langflow to create the AI agent
+- **MCP Server** (`event-mcp-server.py`) - Model Context Protocol server for Langflow integration
+- **Web API Server** (`webServer.py`) - Flask server serving event data via REST API
+- **Event Data** (`data/event.json`) - JSON storage for event information
 
 ## Features
 
@@ -56,10 +56,22 @@ The project consists of two main components:
    npm run dev
    ```
 
-3. **Set up Event Management System**
+3. **Set up Langflow Components**
    ```bash
    cd langflow
    pip install -r requirements.txt
+   
+   # Install Langflow
+   pip install langflow
+   
+   # Start Langflow and import the agent
+   langflow run
+   # In Langflow UI: Import 'EmCee P Agent.json' to create your agent
+   
+   # Start the MCP server (in a separate terminal)
+   python event-mcp-server.py
+   
+   # Start the web API server (in another terminal)
    python webServer.py
    ```
 
@@ -76,8 +88,9 @@ The project consists of two main components:
 1. **Incoming Call**: User calls the Twilio number
 2. **Voice Processing**: ConversationRelay converts speech to text in real-time
 3. **AI Processing**: Text is sent to the Langflow agent for natural language understanding
-4. **Event Data**: The MCP server provides access to event information and management tools
-5. **Response**: AI response is converted back to speech and played to the caller
+4. **Event Data Access**: The Langflow agent uses the MCP server to access and update event information
+5. **Live Updates**: When the agent updates `event.json`, changes are immediately available via the web API server
+6. **Response**: AI response is converted back to speech and played to the caller
 
 ## API Endpoints
 
@@ -86,20 +99,26 @@ The project consists of two main components:
 - `POST /voice` - Twilio webhook for incoming calls
 - `WS /websocket` - WebSocket for ConversationRelay
 
-### Event Management
+### Web API Server (Flask)
 - `GET /api/event` - Get complete event data
 - `GET /api/schedule` - Get event schedule
 - `GET /api/attendees` - Get attendee list
 - `GET /api/organizers` - Get organizer information
 - `GET /api/faq` - Get frequently asked questions
 
+### MCP Server
+- Provides tools for the Langflow agent to access and modify event data
+- Integrates with `event.json` for real-time updates
+- Handles SMS notifications via Twilio
+
 ## Development
 
-Each component has its own development setup:
+Each component runs independently:
 
 - **Twilio Client**: See `twilio-client/README.md` for detailed setup
-- **Event Management**: Run `python webServer.py` to start the Flask server
-- **MCP Server**: Run `python event-mcp-server.py` for Langflow integration
+- **Langflow Agent**: Import `EmCee P Agent.json` into Langflow, then configure MCP component to connect to the MCP server
+- **MCP Server**: Run `python event-mcp-server.py` - provides tools for the Langflow agent
+- **Web API Server**: Run `python webServer.py` - serves event data that updates when the agent modifies `event.json`
 
 ## Configuration
 
