@@ -1,0 +1,448 @@
+{
+  "event_id": "tech-conf-2025",
+  "name": "Tech Conference 2025",
+  "date": "2025-06-21",
+  "location": {
+    "name": "Downtown Convention Center",
+    "address": "123 Main Street, Suite 100",
+    "parking": "Free parking available in garage levels 2-4, enter from Oak Street",
+    "maps_url": "https://maps.google.com/convention-center"
+  },
+  "schedule": [
+    {
+      "id": "registration",
+      "time": "09:15",
+      "end_time": "10:00",
+      "title": "Registration & Check-in",
+      "location": "Main Lobby",
+      "capacity": 500,
+      "description": "Check-in and welcome breakfast"
+    },
+    {
+      "id": "keynote",
+      "time": "10:30",
+      "end_time": "11:00",
+      "title": "Opening Keynote: The Future of AI",
+      "location": "Main Hall",
+      "speaker": "Dr. Sarah Chen",
+      "capacity": 400,
+      "description": "Exploring the next decade of AI innovation"
+    },
+    {
+      "id": "coffee_break",
+      "time": "11:00",
+      "end_time": "11:30",
+      "title": "Coffee Break",
+      "location": "Terrace",
+      "description": "Networking and refreshments"
+    },
+    {
+      "id": "panel",
+      "time": "11:30",
+      "end_time": "12:30",
+      "title": "AI Innovation Panel",
+      "location": "room b",
+      "speakers": [
+        "Dr. Sarah Chen",
+        "Prof. Mike Rodriguez",
+        "Lisa Wang"
+      ],
+      "capacity": 400,
+      "description": "Panel discussion on AI trends and challenges"
+    },
+    {
+      "id": "lunch",
+      "time": "13:00",
+      "end_time": "14:00",
+      "title": "Networking Lunch",
+      "location": "Exhibition Hall",
+      "description": "Lunch with dietary accommodations available"
+    },
+    {
+      "id": "workshops",
+      "time": "14:00",
+      "end_time": "16:00",
+      "title": "Parallel Workshops",
+      "sessions": [
+        {
+          "title": "Machine Learning 101",
+          "location": "Room A",
+          "capacity": 50
+        },
+        {
+          "title": "AI Ethics Workshop",
+          "location": "Room B",
+          "capacity": 50
+        }
+      ]
+    },
+    {
+      "id": "item_7",
+      "title": "Test Workshop",
+      "time": "15:00",
+      "end_time": "16:00",
+      "location": "Room C"
+    },
+    {
+      "id": "item_8",
+      "title": "Test Workshop",
+      "time": "15:00",
+      "end_time": "16:00",
+      "location": "Room C"
+    }
+  ],
+  "attendees": [
+    {
+      "id": "att_001",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "company": "Tech Corp",
+      "dietary_restrictions": "vegetarian"
+    },
+    {
+      "id": "att_002",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "company": "Innovation Labs",
+      "dietary_restrictions": "none"
+    },
+    {
+      "id": "att_003",
+      "name": "Mike Johnson",
+      "email": "mike@example.com",
+      "company": "StartupAI",
+      "dietary_restrictions": "gluten-free"
+    },
+    {
+      "id": "att_101",
+      "name": "Sam Rae",
+      "email": "sam@example.com",
+      "company": "StartupAI",
+      "phone": "+447775777658",
+      "dietary_restrictions": "gluten-free"
+    },
+    {
+      "id": "att_004",
+      "name": "Andrea Della Corte",
+      "phone": "+447575171999",
+      "email": "andrea@example.com",
+      "company": "Tech Startup",
+      "dietary_restrictions": "vegetarian"
+    },
+    {
+      "id": "att_005",
+      "name": "Santa Claus",
+      "dietary_restrictions": "no reindeer meat"
+    }
+  ],
+  "organizers": [
+    {
+      "id": "org_001",
+      "name": "Event Manager",
+      "phone": "+447575171999",
+      "email": "manager@techconf.com",
+      "role": "Lead Organizer"
+    },
+    {
+      "id": "org_002",
+      "name": "Sarah Johnson",
+      "phone": "+447575172000",
+      "email": "sarah@techconf.com",
+      "role": "Program Director"
+    }
+  ],
+  "faq": {
+    "registration": "Registration starts at 9:00 AM in the main lobby. Please bring your confirmation email and ID.",
+    "parking": "Free parking is available in the convention center garage on levels 2-4. Enter from Oak Street.",
+    "wifi": "The Wi-Fi is now working again. Thank you for your patience.",
+    "lunch": "Lunch will be provided at 12:30 PM in the exhibition hall. Dietary restrictions accommodated - please inform staff.",
+    "location": "Downtown Convention Center, 123 Main Street, Suite 100. The venue is wheelchair accessible.",
+    "dress_code": "Business casual attire recommended",
+    "contact": "For questions, contact events@techconf.com or call (555) 123-4567",
+    "schedule": "Full schedule available in the mobile app or on the event website",
+    "workshops": "Workshop registration is first-come-first-served. Capacity is limited to 50 per session.",
+    "networking": "Networking breaks are scheduled at 11:00 AM and 12:30 PM. Use the #TechConf2025 hashtag!",
+    "test_key": "test_value",
+    "lunch_time": "Lunch will be served at 11:00 AM."
+  },
+  "changelog": [
+    {
+      "type": "time_change",
+      "example": "Moved keynote from 10:00 to 10:30",
+      "impact_analysis": true
+    },
+    {
+      "type": "location_change",
+      "example": "Moved panel to Room B due to technical issues",
+      "notify_attendees": true
+    },
+    {
+      "type": "speaker_change",
+      "example": "Dr. Chen cancelled, replaced by Prof. Martinez",
+      "update_materials": true
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Networking Lunch from 12:30 to 13:00",
+      "timestamp": "2025-06-21T09:33:07.424142",
+      "old_value": "12:30",
+      "new_value": "13:00",
+      "item_id": "lunch"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Networking Lunch from 13:00 to 13:00",
+      "timestamp": "2025-06-21T09:34:18.725988",
+      "old_value": "13:00",
+      "new_value": "13:00",
+      "item_id": "lunch"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Networking Lunch from 13:00 to 13:00",
+      "timestamp": "2025-06-21T09:34:38.540532",
+      "old_value": "13:00",
+      "new_value": "13:00",
+      "item_id": "lunch"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Opening Keynote: The Future of AI from 10:00 to 10:30",
+      "timestamp": "2025-06-21T09:39:56.901946",
+      "old_value": "10:00",
+      "new_value": "10:30",
+      "item_id": "keynote"
+    },
+    {
+      "type": "location_change",
+      "description": "Moved AI Innovation Panel to room b",
+      "timestamp": "2025-06-21T09:39:56.902636",
+      "old_value": "Main Hall",
+      "new_value": "room b",
+      "item_id": "panel"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Networking Lunch from 13:00 to 13:00",
+      "timestamp": "2025-06-21T09:39:56.903708",
+      "old_value": "13:00",
+      "new_value": "13:00",
+      "item_id": "lunch"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Opening Keynote: The Future of AI from 10:30 to 10:30",
+      "timestamp": "2025-06-21T09:41:10.306723",
+      "old_value": "10:30",
+      "new_value": "10:30",
+      "item_id": "keynote"
+    },
+    {
+      "type": "location_change",
+      "description": "Moved AI Innovation Panel to room b",
+      "timestamp": "2025-06-21T09:41:10.307613",
+      "old_value": "room b",
+      "new_value": "room b",
+      "item_id": "panel"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Networking Lunch from 13:00 to 13:00",
+      "timestamp": "2025-06-21T09:41:10.309040",
+      "old_value": "13:00",
+      "new_value": "13:00",
+      "item_id": "lunch"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Opening Keynote: The Future of AI from 10:30 to 10:30",
+      "timestamp": "2025-06-21T09:56:43.692207",
+      "old_value": "10:30",
+      "new_value": "10:30",
+      "item_id": "keynote"
+    },
+    {
+      "type": "location_change",
+      "description": "Moved AI Innovation Panel to room b",
+      "timestamp": "2025-06-21T09:56:43.693007",
+      "old_value": "room b",
+      "new_value": "room b",
+      "item_id": "panel"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Networking Lunch from 13:00 to 13:00",
+      "timestamp": "2025-06-21T09:56:43.694363",
+      "old_value": "13:00",
+      "new_value": "13:00",
+      "item_id": "lunch"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Opening Keynote: The Future of AI from 10:30 to 10:30",
+      "timestamp": "2025-06-21T10:01:47.987689",
+      "old_value": "10:30",
+      "new_value": "10:30",
+      "item_id": "keynote"
+    },
+    {
+      "type": "location_change",
+      "description": "Moved AI Innovation Panel to room b",
+      "timestamp": "2025-06-21T10:01:47.988432",
+      "old_value": "room b",
+      "new_value": "room b",
+      "item_id": "panel"
+    },
+    {
+      "action": "add_faq",
+      "key": "test_key",
+      "value": "test_value",
+      "timestamp": "2025-06-21T10:01:47.989562"
+    },
+    {
+      "action": "add_schedule_item",
+      "item": {
+        "id": "item_7",
+        "title": "Test Workshop",
+        "time": "15:00",
+        "end_time": "16:00",
+        "location": "Room C"
+      },
+      "timestamp": "2025-06-21T10:01:47.990160"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Networking Lunch from 13:00 to 13:00",
+      "timestamp": "2025-06-21T10:01:47.990857",
+      "old_value": "13:00",
+      "new_value": "13:00",
+      "item_id": "lunch"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Opening Keynote: The Future of AI from 10:30 to 10:30",
+      "timestamp": "2025-06-21T10:02:36.933670",
+      "old_value": "10:30",
+      "new_value": "10:30",
+      "item_id": "keynote"
+    },
+    {
+      "type": "location_change",
+      "description": "Moved AI Innovation Panel to room b",
+      "timestamp": "2025-06-21T10:02:36.934763",
+      "old_value": "room b",
+      "new_value": "room b",
+      "item_id": "panel"
+    },
+    {
+      "action": "update_faq",
+      "key": "test_key",
+      "old_value": "test_value",
+      "new_value": "test_value",
+      "timestamp": "2025-06-21T10:02:36.936279"
+    },
+    {
+      "action": "add_schedule_item",
+      "item": {
+        "id": "item_8",
+        "title": "Test Workshop",
+        "time": "15:00",
+        "end_time": "16:00",
+        "location": "Room C"
+      },
+      "timestamp": "2025-06-21T10:02:36.936969"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Networking Lunch from 13:00 to 13:00",
+      "timestamp": "2025-06-21T10:02:36.937670",
+      "old_value": "13:00",
+      "new_value": "13:00",
+      "item_id": "lunch"
+    },
+    {
+      "type": "location_change",
+      "description": "Moved Coffee Break to Terrace",
+      "timestamp": "2025-06-21T10:04:46.399569",
+      "old_value": "Lobby",
+      "new_value": "Terrace",
+      "item_id": "coffee_break"
+    },
+    {
+      "action": "add_schedule_item",
+      "item": {
+        "id": "item_9",
+        "title": "Andrea Della Corte",
+        "time": "09:00",
+        "end_time": "09:00",
+        "location": "N/A",
+        "description": "New attendee with vegetarian dietary restrictions"
+      },
+      "timestamp": "2025-06-21T10:12:18.765508"
+    },
+    {
+      "action": "add_attendee",
+      "attendee": {
+        "id": "att_004",
+        "name": "Andrea Della Corte",
+        "email": "andrea@example.com",
+        "company": "Tech Startup",
+        "dietary_restrictions": "vegetarian"
+      },
+      "timestamp": "2025-06-21T10:15:39.442163"
+    },
+    {
+      "action": "add_attendee",
+      "attendee": {
+        "id": "att_005",
+        "name": "Santa Claus",
+        "dietary_restrictions": "no reindeer meat"
+      },
+      "timestamp": "2025-06-21T10:18:04.221936"
+    },
+    {
+      "action": "add_faq",
+      "key": "lunch_time",
+      "value": "Lunch will be served at 11:00 AM.",
+      "timestamp": "2025-06-21T13:36:20.364434"
+    },
+    {
+      "action": "update_faq",
+      "key": "wifi",
+      "old_value": "WiFi network: EventWiFi, Password: Connect2025",
+      "new_value": "The Wi-Fi is currently broken. We are working to fix it as soon as possible. Thank you for your patience.",
+      "timestamp": "2025-06-21T14:00:28.347966"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Networking Lunch from 13:00 to 13:00",
+      "timestamp": "2025-06-21T14:03:39.241131",
+      "old_value": "13:00",
+      "new_value": "13:00",
+      "item_id": "lunch"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Registration & Check-in from 09:00 to 09:15",
+      "timestamp": "2025-06-21T14:36:54.437859",
+      "old_value": "09:00",
+      "new_value": "09:15",
+      "item_id": "registration"
+    },
+    {
+      "type": "time_change",
+      "description": "Moved Registration & Check-in from 09:15 to 09:15",
+      "timestamp": "2025-06-21T14:37:09.064515",
+      "old_value": "09:15",
+      "new_value": "09:15",
+      "item_id": "registration"
+    },
+    {
+      "action": "update_faq",
+      "key": "wifi",
+      "old_value": "The Wi-Fi is currently broken. We are working to fix it as soon as possible. Thank you for your patience.",
+      "new_value": "The Wi-Fi is now working again. Thank you for your patience.",
+      "timestamp": "2025-06-21T15:24:07.405496"
+    }
+  ]
+}
