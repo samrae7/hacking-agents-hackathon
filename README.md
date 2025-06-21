@@ -1,5 +1,9 @@
 # EmCee P - AI Event Assistant
 
+<p align="center">
+  <img src="logo.webp" alt="EmCee P Logo" />
+</p>
+
 An AI-powered voice assistant for event management that combines Langflow, Twilio voice services, and real-time event data processing.
 
 ## Overview
