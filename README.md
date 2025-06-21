@@ -1,32 +1,32 @@
-# EmCee P - AI Event Assistant
-
 <p align="center">
   <img src="logo.webp" alt="EmCee P Logo" />
 </p>
 
-An AI-powered voice assistant for event management that combines Langflow, Twilio voice services, and real-time event data processing.
+# 🎤 EmCee P - AI Event Assistant 🤖
 
-## Overview
+An AI-powered voice assistant for event management that combines Langflow, Twilio voice services, and real-time event data processing. 🚀
 
-This hackathon project creates an intelligent event MC (Master of Ceremonies) called "P" that can handle voice calls, answer questions about events, and manage event data in real-time. The system integrates multiple technologies to provide a seamless voice-to-AI experience.
+## 📋 Overview
 
-## Architecture
+This hackathon project creates an intelligent event MC (Master of Ceremonies) called "P" that can handle voice calls, answer questions about events, and manage event data in real-time. The system integrates multiple technologies to provide a seamless voice-to-AI experience. 🎯
+
+## 🏗️ Architecture
 
 The project consists of two main components:
 
-### 1. Twilio Voice Client (`/twilio-client`)
+### 1. 📞 Twilio Voice Client (`/twilio-client`)
 
-- **Node.js/Express** server handling incoming voice calls
-- **Twilio ConversationRelay** for real-time speech-to-text and text-to-speech
-- **WebSocket** integration for bidirectional communication
-- **Langflow integration** via HTTP API calls
+- **Node.js/Express** server handling incoming voice calls 🌐
+- **Twilio ConversationRelay** for real-time speech-to-text and text-to-speech 🗣️
+- **WebSocket** integration for bidirectional communication ⚡
+- **Langflow integration** via HTTP API calls 🔗
 
-### 2. Langflow Components (`/langflow`)
+### 2. 🤖 Langflow Components (`/langflow`)
 
-- **Langflow Agent** (`EmCee P Agent.json`) - Import this JSON file into Langflow to create the AI agent
-- **MCP Server** (`event-mcp-server.py`) - Model Context Protocol server for Langflow integration
-- **Web API Server** (`webServer.py`) - Flask server serving event data via REST API
-- **Event Data** (`data/event.json`) - JSON storage for event information
+- **Langflow Agent** (`EmCee P Agent.json`) - Import this JSON file into Langflow to create the AI agent 📄
+- **MCP Server** (`event-mcp-server.py`) - Model Context Protocol server for Langflow integration 🔧
+- **Web API Server** (`webServer.py`) - Flask server serving event data via REST API 🌍
+- **Event Data** (`data/event.json`) - JSON storage for event information 📊
 
 ## Features
 
