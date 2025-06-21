@@ -11,12 +11,14 @@ This hackathon project creates an intelligent event MC (Master of Ceremonies) ca
 The project consists of two main components:
 
 ### 1. Twilio Voice Client (`/twilio-client`)
+
 - **Node.js/Express** server handling incoming voice calls
 - **Twilio ConversationRelay** for real-time speech-to-text and text-to-speech
 - **WebSocket** integration for bidirectional communication
 - **Langflow integration** via HTTP API calls
 
 ### 2. Langflow Components (`/langflow`)
+
 - **Langflow Agent** (`EmCee P Agent.json`) - Import this JSON file into Langflow to create the AI agent
 - **MCP Server** (`event-mcp-server.py`) - Model Context Protocol server for Langflow integration
 - **Web API Server** (`webServer.py`) - Flask server serving event data via REST API
@@ -34,6 +36,7 @@ The project consists of two main components:
 ## Quick Start
 
 ### Prerequisites
+
 - Node.js (v14+)
 - Python 3.8+
 - Twilio account with phone number
@@ -42,12 +45,14 @@ The project consists of two main components:
 ### Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd langflow-hackathon
    ```
 
 2. **Set up Twilio Client**
+
    ```bash
    cd twilio-client
    npm install
@@ -57,25 +62,29 @@ The project consists of two main components:
    ```
 
 3. **Set up Langflow Components**
+
    ```bash
    cd langflow
    pip install -r requirements.txt
-   
+
    # Install Langflow
    pip install langflow
-   
+
    # Start Langflow and import the agent
    langflow run
    # In Langflow UI: Import 'EmCee P Agent.json' to create your agent
-   
+
    # Start the MCP server (in a separate terminal)
    python event-mcp-server.py
-   
+
    # Start the web API server (in another terminal)
    python webServer.py
    ```
 
+   See [langflow docs](https://docs.langflow.org/) for troubleshooting
+
 4. **Expose local server for webhooks**
+
    ```bash
    ngrok http 3000
    ```
@@ -95,11 +104,13 @@ The project consists of two main components:
 ## API Endpoints
 
 ### Twilio Client
+
 - `GET /health` - Health check
 - `POST /voice` - Twilio webhook for incoming calls
 - `WS /websocket` - WebSocket for ConversationRelay
 
 ### Web API Server (Flask)
+
 - `GET /api/event` - Get complete event data
 - `GET /api/schedule` - Get event schedule
 - `GET /api/attendees` - Get attendee list
@@ -107,6 +118,7 @@ The project consists of two main components:
 - `GET /api/faq` - Get frequently asked questions
 
 ### MCP Server
+
 - Provides tools for the Langflow agent to access and modify event data
 - Integrates with `event.json` for real-time updates
 - Handles SMS notifications via Twilio
@@ -123,6 +135,7 @@ Each component runs independently:
 ## Configuration
 
 Key environment variables:
+
 - `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN` - Twilio credentials
 - `LANGFLOW_URL` - Your Langflow agent endpoint
 - `LANGFLOW_API_KEY` - Langflow authentication (if required)
