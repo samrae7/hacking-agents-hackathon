@@ -37,25 +37,25 @@ The project consists of two main components:
 - 🔄 **Real-time Updates**: WebSocket-based communication for live event data
 - 📊 **Intent Recognition**: Classify and route voice commands appropriately
 
-## Quick Start
+## 🚀 Quick Start
 
-### Prerequisites
+### 📋 Prerequisites
 
-- Node.js (v14+)
-- Python 3.8+
-- Twilio account with phone number
-- ngrok for local development
+- Node.js (v14+) 💻
+- Python 3.8+ 🐍
+- Twilio account with phone number ☎️
+- ngrok for local development 🌐
 
-### Setup
+### ⚙️ Setup
 
-1. **Clone the repository**
+1. **📥 Clone the repository**
 
    ```bash
    git clone <repository-url>
    cd langflow-hackathon
    ```
 
-2. **Set up Twilio Client**
+2. **📞 Set up Twilio Client**
 
    ```bash
    cd twilio-client
@@ -65,7 +65,7 @@ The project consists of two main components:
    npm run dev
    ```
 
-3. **Set up Langflow Components**
+3. **🤖 Set up Langflow Components**
 
    ```bash
    cd langflow
@@ -85,77 +85,77 @@ The project consists of two main components:
    python webServer.py
    ```
 
-   See [langflow docs](https://docs.langflow.org/) for troubleshooting
+   See [langflow docs](https://docs.langflow.org/) for troubleshooting 📚
 
-4. **Expose local server for webhooks**
+4. **🌐 Expose local server for webhooks**
 
    ```bash
    ngrok http 3000
    ```
 
-5. **Configure Twilio webhook**
+5. **🔧 Configure Twilio webhook**
    - Set your Twilio phone number webhook to: `https://your-ngrok-url.ngrok.io/voice`
 
-## How It Works
+## ⚡ How It Works
 
-1. **Incoming Call**: User calls the Twilio number
-2. **Voice Processing**: ConversationRelay converts speech to text in real-time
-3. **AI Processing**: Text is sent to the Langflow agent for natural language understanding
-4. **Event Data Access**: The Langflow agent uses the MCP server to access and update event information
-5. **Live Updates**: When the agent updates `event.json`, changes are immediately available via the web API server
-6. **Response**: AI response is converted back to speech and played to the caller
+1. **📞 Incoming Call**: User calls the Twilio number
+2. **🗣️ Voice Processing**: ConversationRelay converts speech to text in real-time
+3. **🧠 AI Processing**: Text is sent to the Langflow agent for natural language understanding
+4. **📊 Event Data Access**: The Langflow agent uses the MCP server to access and update event information
+5. **🔄 Live Updates**: When the agent updates `event.json`, changes are immediately available via the web API server
+6. **💬 Response**: AI response is converted back to speech and played to the caller
 
-## API Endpoints
+## 🔌 API Endpoints
 
-### Twilio Client
+### 📞 Twilio Client
 
-- `GET /health` - Health check
-- `POST /voice` - Twilio webhook for incoming calls
-- `WS /websocket` - WebSocket for ConversationRelay
+- `GET /health` - Health check ✅
+- `POST /voice` - Twilio webhook for incoming calls 📞
+- `WS /websocket` - WebSocket for ConversationRelay ⚡
 
-### Web API Server (Flask)
+### 🌍 Web API Server (Flask)
 
-- `GET /api/event` - Get complete event data
-- `GET /api/schedule` - Get event schedule
-- `GET /api/attendees` - Get attendee list
-- `GET /api/organizers` - Get organizer information
-- `GET /api/faq` - Get frequently asked questions
+- `GET /api/event` - Get complete event data 📊
+- `GET /api/schedule` - Get event schedule 📅
+- `GET /api/attendees` - Get attendee list 👥
+- `GET /api/organizers` - Get organizer information 👨‍💼
+- `GET /api/faq` - Get frequently asked questions ❓
 
-### MCP Server
+### 🔧 MCP Server
 
-- Provides tools for the Langflow agent to access and modify event data
-- Integrates with `event.json` for real-time updates
-- Handles SMS notifications via Twilio
+- Provides tools for the Langflow agent to access and modify event data 🛠️
+- Integrates with `event.json` for real-time updates 🔄
+- Handles SMS notifications via Twilio 📱
 
-## Development
+## 🛠️ Development
 
 Each component runs independently:
 
-- **Twilio Client**: See `twilio-client/README.md` for detailed setup
-- **Langflow Agent**: Import `EmCee P Agent.json` into Langflow, then configure MCP component to connect to the MCP server
-- **MCP Server**: Run `python event-mcp-server.py` - provides tools for the Langflow agent
-- **Web API Server**: Run `python webServer.py` - serves event data that updates when the agent modifies `event.json`
+- **📞 Twilio Client**: See `twilio-client/README.md` for detailed setup
+- **🤖 Langflow Agent**: Import `EmCee P Agent.json` into Langflow, then configure MCP component to connect to the MCP server
+- **🔧 MCP Server**: Run `python event-mcp-server.py` - provides tools for the Langflow agent
+- **🌍 Web API Server**: Run `python webServer.py` - serves event data that updates when the agent modifies `event.json`
 
-## Configuration
+## ⚙️ Configuration
 
 Key environment variables:
 
-- `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN` - Twilio credentials
-- `LANGFLOW_URL` - Your Langflow agent endpoint
-- `LANGFLOW_API_KEY` - Langflow authentication (if required)
+- `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN` - Twilio credentials 🔑
+- `LANGFLOW_URL` - Your Langflow agent endpoint 🔗
+- `LANGFLOW_API_KEY` - Langflow authentication (if required) 🔐
 
-## Testing
+## 🧪 Testing
 
-1. Call your Twilio phone number
-2. Speak naturally to the AI assistant
-3. Ask questions about the event (schedule, attendees, etc.)
-4. The system will process your speech and respond with relevant information
+1. Call your Twilio phone number 📞
+2. Speak naturally to the AI assistant 🗣️
+3. Ask questions about the event (schedule, attendees, etc.) ❓
+4. The system will process your speech and respond with relevant information 💬
 
-## Technologies Used
+## 🛠️ Technologies Used
 
-- **Twilio**: Voice API and ConversationRelay
-- **Langflow**: AI agent orchestration
-- **Flask**: Web server for event data
-- **Express.js**: Voice application server
-- **WebSocket**: Real-time communication
-- **MCP**: Model Context Protocol for AI integration
+- **Twilio**: Voice API and ConversationRelay ☎️
+- **Langflow**: AI agent orchestration 🤖
+- **Flask**: Web server for event data 🌍
+- **Express.js**: Voice application server 🌐
+- **WebSocket**: Real-time communication ⚡
+- **MCP**: Model Context Protocol for AI integration 🔧
